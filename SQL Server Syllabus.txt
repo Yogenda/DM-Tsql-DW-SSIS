@@ -1,0 +1,108 @@
+Data Modeling
+- Requirements 
+- methodologies
+- data modeling life cycle
+- er-diagram
+- advanced attributes
+- relationship
+- degree
+- cardinality
+- converging from E-R -diagram
+- normalization
+- reverse and forward engineering
+- database integrity
+- ER diagram symbols
+- chen's notation and crow foot notation
+
+SQL / MySQL - TSQL
+- Intro
+- DML
+- DDL
+- DQL
+- DCL
+- Wildcards
+- string manipulation
+- rules
+- system stored procedures
+- select into & insert into
+- system function
+- DB constraints
+- Cascade functions
+- Aggregate functions
+- Joins
+- Sub-Queries
+- Analytical functions
+- set operations
+- merge commands
+- views
+- ranking Function
+- CTEs- Common Table Expressions
+- Dynamic SQL
+- Control Flow Statements
+- system variables
+- local variables
+- global variables
+- table variables
+- temporary variables
+- Indexes
+- fragmentations of indexes and solutions
+- bulk insert & bulk copy
+- stored procedures
+- types of stored procedures
+- user defined functions
+- different type of functions
+- diff between SP and UDF
+- Partition table
+- Transections
+- Isolations levels
+- triggers
+- cursors
+- Error handling
+- different ways to handle
+- Optimisation of SQL Queries
+- optimisation of SPs
+- SQL server profiler
+- DB Tuning Advisor
+- SQL Server Job Agent
+- Logins
+- Users
+- Roles
+- DB Backup
+- DB Recovery Modes
+
+Data Warehouse
+- OLTP vs OLAP
+- Dimensions and Facts
+- Advance Dimensions
+- Advance Facts
+- Dimensional Modeling
+- Granularity
+- Inmon & Kimball Methodology
+
+SSIS (SQL Server Integration service)
+- SSIS overview
+- xml framework & data flow task
+- DFT with OLEDB adapter and access modes
+- DFT with flat file and excel adapters
+- DFT - source
+- DFT destination
+- DFT transformation (part1, part2)
+- DFT fuzzy lookup and grouping
+- DFT OLEDB and SCD
+- CFT control flow task(part 1, part2 part3)
+- containers
+- loggings in SSIS
+- package deployment
+- project deployment
+- package deployment vs project deployment
+- into to ETL process
+- Incremental load using checksum
+- Incremental load using CDC
+- Incremental load using timestamp
+- optimization of SSIS package
+- error handling in SSIS package
+
+
+Interview prep
+notes
+

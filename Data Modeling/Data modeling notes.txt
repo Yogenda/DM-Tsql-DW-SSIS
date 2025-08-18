@@ -1,0 +1,86 @@
+What is Requirements in Data modeling?
+it refer to the detailed understanding and documentation of what data an organization need to store, process and retrieve.
+
+store, process and retrieve build your foundation.
+
+Real life case: 
+cooking: 
+	- understand the recipe
+	- no of serving
+	- dietary restrictions.
+	- tools
+
+stockholders > domain experts
+- what data do they need to store?
+- what data should be process or analyzed? 
+- What question should the data answer?
+- what the rules that the data must follow?
+- are there any constraints like privacy or access limitations?
+
+once you get answers create the blueprint(data model). which help you to organize the data and access it easily.
+
+Why Gather requirements in Data modeling?
+- to build a data model that accurately represents bussing needs.
+- to avoid wasted effort and resources.
+- DB decision making effectively. 
+
+Benefits of proper Gather requirements?
+- cost effectiveness
+- Accuracy
+- Efficiency
+- better data quality
+- Clarity.
+
+When to use the Gather requirements in Data Modeling?
+- at the start of any Data modeling project.
+- building new DB or system.
+- improve existing DB system.
+- migrating data between systems.
+- system upgrade due to new requiems. 
+
+Real Live Case:
+retail company create db to track sales
+- interview sales manager
+- inventory team
+- finance staff. 
+	cust detail, product info, sales transection, discount and promotion rules.
+
+report sales, inventory manage, revenue analysis without any complexity.
+
+
+when not to use or limitations
+- very small or simple data task 
+- data change rapidly (agile iterative approach might be best)
+- stakeholders have lack of domain knowledge.
+- without clear objective cost heigh.
+
+
+Disadvantage/ challenges Gather requirements
+- Time consuming
+- Miscommunication of risks
+- Incomplete requirement
+- Changing requirements.
+- Dependency on stakeholders 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
