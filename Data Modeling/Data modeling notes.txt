@@ -62,8 +62,96 @@ Disadvantage/ challenges Gather requirements
 - Changing requirements.
 - Dependency on stakeholders 
 
+----------------------------------------
+Class 2
+Methodologies
+Parts of methodologies
+- conceptual, logical, physical data modeling
+- hierarchical data modeling
+- network data modeling
+- Relational data modeling
+- Object oriented data modeling
+- Entity-Relationship (ER) Model
+- Dimensional data modeling
+- Graph data modeling
+
+- Conceptual, Logical, Physical data modeling
+these represent level based approach to Data modeling. serves as the foundation for all methodologies.
+
+Conceptual Model: it shows you the big picture which describes the overall structure main entities of data without technical details. used in discussion b/w stakeholders and data architects to under the requirements.
+
+Logical model: Adds details such as
+	attributes
+	relationships 
+	rules
+without tying the design to particular DB structure.
+used to clarify structure and relationships.
+
+Physical model: it is a format for implementing on a specific DB system, taking into account, like indexes and performance optimization.
+
+- Hierarchical Data Modeling: Data arranges in a tree like structure: every parent node can have multiple child nodes, but every child can only have one parent.
+
+Benefits:
+- Simple to understand
+- fast for hierarchical, repetitive data
+
+real life case:
+company structure: CEO -> department head -> team lead -> Employee 
+
+when/why to use:
+- best for fixed, hierarchical  data - employee management.
+
+Disadvantages/ when not to use:
+- complex relationship (when multiple parents are needed)
+- data change frequently. or difficult to reorganize or accommodate changes.
 
 
+- Network Data Modeling: it allows children to have multiple parents.
+Data organized like a graph or nodes and links.
+
+Benefits: 
+- flexible for complex relationship.
+- efficient for Many-to-many
+
+when/why to use:
+- when relationship is complex.(eg. transportation network, project management dependencies)
+
+Disadvantages/ when not to use:
+- very difficult to design and manage
+
+
+- Relational data modeling: it is tales(relations) where each table row is a record and each column is an attribute. 
+Relationship b/w tables are managed using keys.
+
+When/why to use:
+when data needs to be normalized and diff data types are closely related(banking, retail, HR).
+
+
+real life case:
+banking application: Accounts, customers, Transactions - 
+all connected by keys.
+
+Disadvantages / when not to use:
+- May be overkill for very small or unstructured data.
+- joins can be slow with huge dataset, scaling can be complex.
+
+
+- Object-Oriented Data Model: it contains attributes(data) and behaviors(methods). same as oops programming.
+
+Benefits: 
+- Works well with complex data and relationship.
+- supports inheritance and encapsulation.
+
+when/why to use:
+application working closely with object-oriented programming like CAD system or multimedia db.
+
+real life case:
+multimedia system management (images, videos, audio)
+
+Disadvantages/when not to use: 
+- not supported with traditional relational DB.
+- can be complex.
+- Costly
 
 
 
