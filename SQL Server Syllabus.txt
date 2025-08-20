@@ -1,7 +1,7 @@
 Data Modeling
-- Requirements 
-- methodologies
-- data modeling life cycle
+- Requirements -- done
+- methodologies -- done
+- data modeling life cycle -- done
 - er-diagram
 - advanced attributes
 - relationship

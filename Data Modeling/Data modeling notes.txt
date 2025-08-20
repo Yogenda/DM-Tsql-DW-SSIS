@@ -80,80 +80,175 @@ these represent level based approach to Data modeling. serves as the foundation 
 
 Conceptual Model: it shows you the big picture which describes the overall structure main entities of data without technical details. used in discussion b/w stakeholders and data architects to under the requirements.
 
-Logical model: Adds details such as
-	attributes
-	relationships 
-	rules
-without tying the design to particular DB structure.
-used to clarify structure and relationships.
+	Logical model: Adds details such as
+		attributes
+		relationships 
+		rules
+	without tying the design to particular DB structure.
+	used to clarify structure and relationships.
 
-Physical model: it is a format for implementing on a specific DB system, taking into account, like indexes and performance optimization.
+	Physical model: it is a format for implementing on a specific DB system, taking into account, like indexes and performance optimization.
 
 - Hierarchical Data Modeling: Data arranges in a tree like structure: every parent node can have multiple child nodes, but every child can only have one parent.
 
-Benefits:
-- Simple to understand
-- fast for hierarchical, repetitive data
+	Benefits:
+		- Simple to understand
+		- fast for hierarchical, repetitive data
 
-real life case:
-company structure: CEO -> department head -> team lead -> Employee 
+	real life case:
+		company structure: CEO -> department head -> team lead -> Employee 
 
-when/why to use:
-- best for fixed, hierarchical  data - employee management.
+	when/why to use:
+		- best for fixed, hierarchical  data - employee management.
 
-Disadvantages/ when not to use:
-- complex relationship (when multiple parents are needed)
-- data change frequently. or difficult to reorganize or accommodate changes.
+	Disadvantages/ when not to use:
+		- complex relationship (when multiple parents are needed)
+		- data change frequently. or difficult to reorganize or accommodate changes.
 
 
 - Network Data Modeling: it allows children to have multiple parents.
 Data organized like a graph or nodes and links.
 
-Benefits: 
-- flexible for complex relationship.
-- efficient for Many-to-many
+	Benefits: 
+		- flexible for complex relationship.
+		- efficient for Many-to-many
 
-when/why to use:
-- when relationship is complex.(eg. transportation network, project management dependencies)
+	when/why to use:
+		- when relationship is complex.(eg. transportation network, project management dependencies)
 
-Disadvantages/ when not to use:
-- very difficult to design and manage
+	Disadvantages/ when not to use:
+		- very difficult to design and manage
 
 
 - Relational data modeling: it is tales(relations) where each table row is a record and each column is an attribute. 
 Relationship b/w tables are managed using keys.
 
-When/why to use:
-when data needs to be normalized and diff data types are closely related(banking, retail, HR).
+	When/why to use:
+		when data needs to be normalized and diff data types are closely related(banking, retail, HR).
 
 
-real life case:
-banking application: Accounts, customers, Transactions - 
+	real life case:
+		banking application: Accounts, customers, Transactions - 
 all connected by keys.
 
-Disadvantages / when not to use:
-- May be overkill for very small or unstructured data.
-- joins can be slow with huge dataset, scaling can be complex.
+	Disadvantages / when not to use:
+		- May be overkill for very small or unstructured data.
+		- joins can be slow with huge dataset, scaling can be complex.
 
 
 - Object-Oriented Data Model: it contains attributes(data) and behaviors(methods). same as oops programming.
 
-Benefits: 
-- Works well with complex data and relationship.
-- supports inheritance and encapsulation.
+	Benefits: 
+		- Works well with complex data and relationship.
+		- supports inheritance and encapsulation.
 
-when/why to use:
-application working closely with object-oriented programming like CAD system or multimedia db.
+	when/why to use:
+		application working closely with object-oriented programming like CAD system or multimedia db.
 
-real life case:
-multimedia system management (images, videos, audio)
+	real life case:
+		multimedia system management (images, videos, audio)
 
-Disadvantages/when not to use: 
-- not supported with traditional relational DB.
-- can be complex.
-- Costly
+	Disadvantages/when not to use: 
+		- not supported with traditional relational DB.
+		- can be complex.
+		- Costly
+
+----------------------------------------
+Class 3
+What is Entity-Relational (ER) data model: Visuslization data as "entity" (things) are "relationship" (how those thing interact.)
+
+	how does it work?
+		- diagrams with shapes
+			- rectanges (entities)
+			- ovals (attribute)
+			- diamonds (relationships)
+	
+	Benefits:
+		- creates a shared language for business and IT.
+		- Simplifies complex systems visually.
+	
+	when to use:
+		- during DB design, especially before setting us relational schema.
+		- teaching and communication for complex data system.
+	
+	real life case:
+		- university: 
+			entities: student, class, professor
+			relationship: "enrolled in", "teachers"
+		
+	Disadvantages / when not to use
+		- can become messy with large, higly connected system.
+		- Needs conversion before implementation.
+		
+	
+- Dimensional Data Model: organize data around "fact" (achtions or number measured -like sales, profit) and dimensinas (context - like time, location, product...)
+	
+	how does it work?
+		Star or snowflake schemas provide easy, fast acess to maetrics for analytics and reporting.
+	
+	Benifits:
+		- highly performant for reporting
+		- simple queries for end users - "how may blue shirts sold in july?"
+	
+	When to use:
+		- data warehouse
+		- bi reporting
+		- historical trend tracking
+		
+	Why to use:
+		- self-service analysis.
+		- speed for summary data.
+	
+	real life case:
+		sales dashboard: facts(Sales amount) and dimensions(store, time, product line)
+	
+
+- Graph Data model: represent data as graph of nodes (entities) and edges (relationship)
+	
+
+----------
+
+Data modeling life cycle
+- Requirements analysis : as same as above
+	real life case:
+		you interview the sales tieam and gind that they need to track
+			- sales by product
+			- customers
+			- timings
+			- stores
+			- regions
+			- profit margin
+			- turnover
+			
+- Conceptual data model: it contains only entities
+	real life case:
+		mapping our hospial main enitity
+			- Patients
+			- Doctors
+			- Appointments
+			- treatments
+				(and how they connect.)
+	
+- Logical data modeling: plateform indepent blueprint. 
+	real life case:
+		university system:
+			- student(studnetID, name, email)
+			- course(CourseID, Name, Credits)
+			- Enrollment(EnrollmentID, StudnetID, CourseID, Team)
+		
+- Physical data modeling: selection of datatype, set up constaints, indexes, secuurity, sometimes we have to deside the hardware.
+	real life case:
+		encrypting the sensitive data
+		
+- Tesing, validating & refinemnet: test for accuracy, preformance, refine as needed.
+
+- Deployment: moving the tested model to production environment.
+
+- Mainenance & optimization: bug fix, review, secuurity, fine-tune, onging updates. (it is always an ongoing process).
 
 
+	
+		
 
 
 
