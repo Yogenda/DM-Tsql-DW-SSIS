@@ -246,14 +246,74 @@ Data modeling life cycle
 
 - Mainenance & optimization: bug fix, review, secuurity, fine-tune, onging updates. (it is always an ongoing process).
 
+----------------------------------------
+Class 4
+ER-Diagram: Entity-Relationship diagram(ERD):  Visual representation of major entities (object) in db.
+- structure logic
+- relationship
 
+ERDs standardized symboles:
+- rectanges: entities
+- ovals: attributes
+- diamonds: relationship
+
+example:- School db
+	- entites: Main objects- Student, Class, Teacher
+	- Attribute: Details about each entity: Studnet name, age; class name, time; teacher name, subject.
+	- relationship: How entites connect- studnet enroll in class, teachs teach the class.
 	
+
+entity:
+	- strong
+	- weak
+
+attribute
+	- key
+	- composit
+	- multivalued
+	- derived
+
+Relationship
+	- one to one
+	- one to many
+	- many to one
+	- many to many
+
+benifits: 
+	- clarity
+	- communication
+	- planning
+	- conversion
+	- Error checking
+
+real life case:
+	er diagram for patient, doctor, test.
+	- patient: id, name, insurance, admission date.
+	- doctor: id, name, specialization.
+	- test: test id, result, data.
+
+	relationship
+		- a doctor can treat may patients(one to many)
+		- patient may undergo many test; a test canblong to several patients (many to many)
 		
+Disadvantages/when not:
+	- Loss of details
+	- Mondification difficult
+	- scalability  issues
+	- No standards
+	
+ER-diagram of university system
+	- students: Stud_id (pk), name, DOB
+	- course: course_id (pk), course_name, credits.
+	- proferssor: pro_id(pk), name, title
 
+relationship
+	- studnet enrols in course(many to many)
+	- course taught by proferssor
 
+studnets --< enrols >-- couses --< taught_by >-- proferssor
 
-
-
+Types of attribute
 
 
 
