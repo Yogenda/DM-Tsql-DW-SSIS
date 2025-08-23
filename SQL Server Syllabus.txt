@@ -2,8 +2,8 @@ Data Modeling
 - Requirements -- done
 - methodologies -- done
 - data modeling life cycle -- done
-- er-diagram
-- advanced attributes
+- er-diagram -- done
+- advanced attributes -
 - relationship
 - degree
 - cardinality

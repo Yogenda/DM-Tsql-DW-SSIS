@@ -313,10 +313,60 @@ relationship
 
 studnets --< enrols >-- couses --< taught_by >-- proferssor
 
-Types of attribute
+-----------------------------------
+Class 5
+Types of entities
+	- strong: 
+		- represented as rectange in ER diagram.
+		- it has primary key that ensures its unique data.
+		- it is type of entity that has a key attribute that can uniquely identify each entity
+	- weak: 
+		- it is associated with the storng entity with its identification.
+		- when we tell the realtionship b/w strong and week entity then it will in double dimonds
 
+attribute
+	- key: it holdes the unique values (PK)
+	- composit: made up of smaller sub attributes
+		address is broken down into: hno, street, city, zip,
+	- multivalued: it can have more thena on value for a single entity. 
+		- person can have more then one numbers.
+		- a person can speak multiple languages.
+		- a person can have multiple skills
+		- a person can hold multiple degrees
+	- derived: not stored directly. its value is calculated from other data.
+		- age --- derived from --- DOB
+			2025-1998 = 27
+		- grade can be derived from percentage
+		- total salary derived from hr+bonus+basic
+		- Employee Tenure can be derived from hiring date.
 
+key: under line
+Composit Attribute: ovel
+Multi-values: doulbe ovel
+derived: dashed ovel
 
+Relationship:- 
+- One to one
+- One to many
+- Many to one
+- Many to many
+
+One to one: single instance of an enity is associated with a single instance of another entity.
+	- person has 1 passport no.
+	- studnet and id
+
+One to many: singe enstance of an entity is associated with more than one instances. 
+	- one dept has many employee
+	- customer can place may orders
+	- company has many requirement
+	
+Many to one: more than one instances of an entiy is associatd iwth asingle instance of anoter enity.
+	- many students got to one college
+	- one country can have many states
+	- many employee has one company
+
+Many to many: when one instance of on entity is associatedd with more than one instances of anoter entity.
+	
 
 
 
