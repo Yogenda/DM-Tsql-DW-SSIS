@@ -3,8 +3,8 @@ Data Modeling
 - methodologies -- done
 - data modeling life cycle -- done
 - er-diagram -- done
-- advanced attributes -
-- relationship
+- advanced attributes - done
+- relationship -- done
 - degree
 - cardinality
 - converging from E-R -diagram

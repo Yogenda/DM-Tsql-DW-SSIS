@@ -366,10 +366,73 @@ Many to one: more than one instances of an entiy is associatd iwth asingle insta
 	- many employee has one company
 
 Many to many: when one instance of on entity is associatedd with more than one instances of anoter entity.
+	- many studnets assisgned project
+	- many people can play many games
 	
 
+-------------------------
+class 6
+Degree:
+	it reffers to the number of distinct enititys type that participate in a relatinonship. 
+
+types of Relationship degrees:
+	- Unary (Degree 1): One entity set relates to itself - a self relationship
+		Example: 
+			- Employee supervises employee
+			- Person is a mentor to person.
+		Benifits: recursive relations with a single group.
+		
+
+	- Binary (Degree 2):Connects two distinct entity type. (Most common)
+		example: 
+			- Customer and order
+			- Teacher and studnet
+		benifits: simple, easy to represent, and easy to implement in DB.
+		
+		
+	- Ternary (Degree 3): involves three entity types in a one relatinonship.
+		example: 
+			- doctor prescribe medicine to patient.
+			- supplier supplies product to store.
 
 
+	- n-ary (Degree n): Four or more entity participate in a relationship.
+		Example: 
+			- teacher teaches course in room at time
+		
+		Benifits: covers highly complex bussiness scenarios in on relationship.
+
+Benifits of Degree
+	- clarifies system complexity.
+	- Guides table Design.
+	- improves communication.
+	
+when not use:
+	- too simple for complex logics: degree 3 / degree n can be hard to implement.
+	- hard to maintenace
+	- performance issus.
+	
+
+d1 - [employee] ---- supervises -----> [employee]
+
+d2 - [customer] ---- place -----> [order]
+	
+			[Doctor]
+		/
+		|
+d3 - patient 	---- prescribes ----> [medicine]
+		|
+		\
+			[Data]
+
+
+			[Teacher]
+			   \
+				\
+d4 - [course] ----- teachers ---- [room]
+				/
+			   /
+			[Time]
 
 
 
