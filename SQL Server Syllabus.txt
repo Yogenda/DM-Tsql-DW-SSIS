@@ -5,8 +5,8 @@ Data Modeling
 - er-diagram -- done
 - advanced attributes - done
 - relationship -- done
-- degree
-- cardinality
+- degree -- done
+- cardinality -- done
 - converging from E-R -diagram
 - normalization
 - reverse and forward engineering

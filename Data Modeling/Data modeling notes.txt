@@ -434,9 +434,137 @@ d4 - [course] ----- teachers ---- [room]
 			   /
 			[Time]
 
+-------------------------
+class 7
+What is Cardinality?
+	in human language cardinality descibes the numerical relationship b/w 2 entities (table).
+	
+	how many instances of entity A can be associated with how many instance of entity B.
+	
+Rules:
+	- can  one customer have only one order, or many order?
+	- can one student be enrolled in only one couse or many course?
+	- can on produt belongs to only on category or many?
+	
+- One-to-One (1:1): one recored in entity A can be associated with only one record in entity B and vice versa.
+	real life example:
+		- Person and passport
+		- User andd userProfile
+		- Country and capital city
+		- employee and laptop
+		
+	when to use:
+		- security
+		- performance
+	
+[person] --- (1:1) ---- [passport]
+
+- One-to-Many (1:M) / Many-to-One (M:1): most commont relatinonship. 
+	real life example:
+		- customer and order
+		- Department and employees
+
+[customer] ------ (1:M) ----- [order]
+	
+	when to use:
+		- whe you have to connect with multiple entities
 
 
+- Many-to-Many (M:N): many record of A entites and many record of B entites.
+	real life example:
+		- studnet and course
+		- Products and orders
+		- Authors and books
+
+[Studnet] ------ (M:N) -------- [Course]
+
+Benifits of cardinality?
+	- Data integrity
+	- Clear Business Rules
+	- DB performance
+	- Blueprint For developer
+
+Disadvantages
+	- Incorrect cardinality
+	- Overusing of 1:1 relatinonship
+
+1:1 , 1:M, M:N
+entire table FK, fk will be in Order table, require the junction table (can not be done directly)
+
+----
+Normalization?
+	is the process of organizing data in a database to reduce the redudancy (duplication) and improve the data integrity.
+
+The Normal Forms (NFs): normalization is done in stages called as Normal Forms (NF)
+
+1. First Normal Form (1NF) - the foundataion.
+	- Atomic values: Each column contas only single, individual values
+	- unique rows: PK
+	- column consistency: all data must of same type
+
+	befor normalization:
+		OrderId		Customer		Products
+		101			Humera			Laptop, Mouse
+		102			Hemant			Laptop, mobile, headpone
+	
+	after normalization (1NF):
+		table Order:
+			OrderId 	Customer
+			101			Humera
+			102			Hemant
+		
+		table OrderDetail:
+			detailID 	OrderID 		Products
+			1			101				Laptop
+			2			101				Mouse
+			3 			102				Laptop
+			4			102				mobile
+			5 			102				headpone
 
 
+2. Second Normal Form (2NF) - Remove Partial Dependency
+	Prerequits: the table must already be in 1NF
+	
+Before 2NF
+OrderID		ProductID		ProductName		CustName	Qty
+101			P500			Laptop			Humera		1
+101			P600			Mouse			Humera		1
+
+After Normalization
+	table: orders
+		OrderID 		CustName
+		101				Humera
+		
+	table: OrderDetail (now in 2NF)
+		OrderID		ProductID	Qty
+		101			P500		1
+		101			P600		1
+
+	Table: Products (New table for anoter dependency)
+		ProductID 	ProductName
+		P500		Laptop
+		P600		Mouse
 
 
+Third Normal Form (3NF)	- Remove Transitive Dependency
+	Prerequits: the table must already be in 2NF
+	
+Before 3NF
+	Students
+		StdID 	StdName		ZipCode 	City	State
+		S1		Ramesh		100001		delhi	ND
+		S2		Suresh		200101		pune	MH
+		S3		Mahesh		124001		rohtak	HR
+
+After Normalization
+	zipcode
+		zipcode		city	State
+		100001		delhi	ND
+		200101		pune	MH
+		124001		rohtak	HR
+		
+	Students
+		StdID		StdName		ZipCode
+		S1			Ramesh		100001
+		S2			Suresh		200101
+		S3			Mahesh		124001
