@@ -7,8 +7,8 @@ Data Modeling
 - relationship -- done
 - degree -- done
 - cardinality -- done
-- converging from E-R -diagram
-- normalization
+- converging from E-R -diagram -- done
+- normalization -- done
 - reverse and forward engineering
 - database integrity
 - ER diagram symbols

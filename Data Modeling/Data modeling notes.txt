@@ -568,3 +568,85 @@ After Normalization
 		S1			Ramesh		100001
 		S2			Suresh		200101
 		S3			Mahesh		124001
+		
+
+-------------------------
+class 8
+Converging from E-R - diagram
+
+Rules of converting components of an ER-Diagram
+	- Converting Entities (Easies part)
+		- rule: Each regular entity becomes table
+		- How to: the attribute of an entity become the columns of the talbe . the Primary Key (Underline in ER-Diagram) become your primary key.
+		
+		eg: Customer entity with attributes custerID(PK), name, email.
+		
+		create talbe customer(
+			custerID Int primary key,
+			name varchar(100)
+			email varchar(255)
+		);
+	
+	- Converting Relationship(the core process).
+		- One-to-Many(1:M) 
+			eg: Department has many employee
+				
+			create talbe Department(
+				dept_id int Primary key,
+				dept_name varchar(100)
+			)
+				
+			create table Employee(
+				emp_id int Primary Key,
+				emp_name varchar(100),
+				dep_id int, -- Foreign key added to many side
+				Foreign key (dep_id) references Department(dept_id)
+	
+	- Many-to-Many (M:N) Relationship
+		eg: student can enroll in may couses and a course can have many students.
+		
+		create talbe Student(
+			std_id int Primary Key,
+			std_name varchar(100)
+		)
+		create talbe Couse(
+			course_id int Primary Key,
+			couse_title varchar(100)
+		)
+		---the junction table
+		
+		create table Enrollment(
+			std_id int,
+			course_id int,
+			enroll_date Date, --- this can hold attribute about the relationship itself
+			Primary Key (std_id, course_id) -- composit primary key
+			Foreign key (std_id) references student(std_id),
+			Foreign key (course_id) references student(couse_id),
+		)
+		
+- One-to-One (1:1)
+	rule:- 
+		- add a foreign key to one of the table and make it Unique
+		- Merge the 2 entites into a single table.
+		
+	eg: a user and one profile
+		
+		create table User(
+			user_id int primary key
+			username varchar(50)
+			password varchar(255)			
+		)
+		create table Profile(
+			p_id int primary key,
+			full_name varchar(100),
+			bio text,
+			user_id int unique
+			foreign key (user_id) references User(user_id)
+		)
+
+benifits
+	- Systematic and error-free design
+	- Blueprint for implementation
+	- clear communication
+		
+		
