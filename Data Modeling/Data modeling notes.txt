@@ -648,5 +648,54 @@ benifits
 	- Systematic and error-free design
 	- Blueprint for implementation
 	- clear communication
-		
-		
+	
+
+----------Class 9----------------
+Reverse and Forward Engineering	
+	
+Core concepts:
+	- the blueprint (conceptual model)
+	- the building structure (Physical Database)	
+Forward and reverse enginerring are the process that connect these 2 worlds.
+
+Forward Engineering: process of automatically generating the physical DB from the Virtual Mode (E-R Diagram)
+	- input: A Virtual Data Model (E-R Diagram in MySql workbench, draw.io)
+	- process: s/w tools anzlyzes the model
+	- output: SQL scrit full of Create table, alter table, 
+
+	Benifits:
+		- speed and accuracy
+		- consistency
+		- documentation
+		- version control
+	
+Reverse Engineering: process of automatically generating a visual model from an existing physical db.
+	- input: live DB
+	- process: tools connected to DB, 
+	- output: E-R Diagram that represent the current DB structure.
+
+	benifits
+		- Understanding and documentation.
+		- Recovering the lost design.
+	why to use
+		- pre migeration analysis
+		- Troubleshooting and analysis
+
+
+			 /-----------Forward Engi ---------- \
+			/									  \?
+	E-R Diagram <--------- revers engi --------- Physical DB
+
+
+
+Database Integrity:
+	- accuracy
+	- consitency
+	- reliablity
+throught out the life.
+
+Four type of Data Integrity
+	- Entity Integrity : enuser the row must have the unique values and it is implemented by PK
+	- Referenctial Integrity: to implement the relatinonship b/w talbes. implemented by using Foreign Key
+		rules(ON Delete and ON Updata) to specify what to do if parent change the data (Cascade, Set null, Restict)
+	- Domain Integrity: rule ensures the value in column are valid, meanigful. its about the "What" of the data

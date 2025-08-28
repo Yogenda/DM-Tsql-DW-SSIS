@@ -9,7 +9,7 @@ Data Modeling
 - cardinality -- done
 - converging from E-R -diagram -- done
 - normalization -- done
-- reverse and forward engineering
+- reverse and forward engineering -- done
 - database integrity
 - ER diagram symbols
 - chen's notation and crow foot notation
