@@ -698,4 +698,77 @@ Four type of Data Integrity
 	- Entity Integrity : enuser the row must have the unique values and it is implemented by PK
 	- Referenctial Integrity: to implement the relatinonship b/w talbes. implemented by using Foreign Key
 		rules(ON Delete and ON Updata) to specify what to do if parent change the data (Cascade, Set null, Restict)
-	- Domain Integrity: rule ensures the value in column are valid, meanigful. its about the "What" of the data
+	- Domain Integrity: rule ensures the value in column are valid, meanigful. its about the "What" of the data.
+		eg: salary --> how many empl have salary>20000
+			gender --> how many empl are male or femal
+		how to implement: check, not null, unique etc.
+	- user defined integrity: collection of entity, Referenctial, Domain.
+		how to implement: Stored procedures and Triggers
+		
+---------- Class 10 -------------
+Chen's notation and Crow Foot notation
+	- Entities: "Nouns" or the things (Customer, Products, Orders)
+	- Attribute: "Adjectives" Or properties of those things (CustomerName, ProductPrice)
+	- Reletionship: "Verbs" or connections b/w things(Places, contains).
+	
+Chen's Notation (The Academic Foundation)
+	- it clearly seprates entites, relatinonship and attribute.
+	
+	Symbols
+		- entites: Rectangles.
+			eg: student, couse
+		- relatinonship: Diamonds
+			eg: enroll in
+		- attribute: Ovals
+			eg: StudnetID, CourseName
+		- PK: Underline
+		- cardinality: 1,N,M
+	
+	Benefits:
+		- High clarity
+		- Academic fundamentals
+		- Handles Complexity
+	
+	Disadvantage
+		- Bulky and space consuming
+		- Less common in industry
+	
+Crow Foot Notation (Industry Standard)
+	it is mostly used in business and industy. 
+	
+	Symbols
+		- entites: Rectangles
+		- relatinonship: represented by single line b/w entity with symboles at each end to denote cardinality.
+		- attribute: listed inside the entity rectange. PK are ususlly at the top.
+		- cardinality: 
+			- | (single line): "one" or "Mandatory"
+			- O (circle): "zero" or "optional"
+			- >| (crow's foot): "many"
+			
+	benefits:
+		- Extremly compact:
+		- look good to eys:
+		- industy standardized
+	
+	when to use:
+		- use industy
+		- use for db implementation
+		- use for team collaboration
+	
+	Disadvantage:
+		- Learning curve: 
+	
+	
+Chens notation vs Crow's foot notation
+- Chen's Notation:
+	- entity: rectangel
+	- relatinonship: diamonds
+	- attribute: Ovals(connected)
+	- space efficiency: Low(Bulky)
+	
+- Crow's Foot Notation:
+	- entity: rectangel
+	- relatinonship: line
+	- attribute: inside the entity box
+	- space efficiency: High(compact)
+	

@@ -10,9 +10,9 @@ Data Modeling
 - converging from E-R -diagram -- done
 - normalization -- done
 - reverse and forward engineering -- done
-- database integrity
-- ER diagram symbols
-- chen's notation and crow foot notation
+- database integrity -- done
+- ER diagram symbols -- done
+- chen's notation and crow foot notation -- done
 
 SQL / MySQL - TSQL
 - Intro
