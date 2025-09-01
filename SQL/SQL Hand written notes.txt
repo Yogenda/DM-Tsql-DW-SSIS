@@ -1,0 +1,61 @@
+SQL Notes
+----------- Class 1 ----------
+SQL: Structured Query Language, used to interact with DB. 
+
+eg: librarian -> ask for book (query), updata detail (updata), add a new book (insert), remove the book(delete).
+
+Why SQL?
+	- almot every app/website uses a db.
+	- industy-standard (MySQL, PostgreSQL, Oracle, SQL Server, etc.)
+	- sql makes it easy to store, retrive, and mange the data.
+	
+Real example: 
+	Instagram: post, likes, comments
+	E-Commerse: products, orders, customers.
+
+SQL vs NoSQL
+SQL: data in structured form. Rows and column format
+	features:
+		- schema-based: data structure must be defined befor inseting data.
+		- sql (select, inset, updata.....)
+		- relationship b/w tables using Primary Key & Foreign Key
+	
+	Advantages: 
+		- Best for Structured Data.
+		- complex queries supported with joins
+		- Strong consistency & reliability(ACID)
+	
+	Disadvantages: 
+		- Rigid: schema must be predefined
+		- Scaling is harder
+	
+	Real examples:
+		- banking system
+		- college/universities
+		- e-commerse orders
+	
+
+NoSQL: Data stored are flexible, cna store unstructured, semi-structured.
+	features:
+		- schema-less (no fix structure)
+		- diff types:
+			- Key-Value (Redis)
+			- document base (MongoDB -> json like)
+			- column-based(cassandra)
+		- desinge for scaliblity(Horizontal)
+	
+	Advantages: 
+		- flexible
+		- scales easily with large distributed data.
+		- Faste for big data and real time apps.
+	
+	Disadvantages:
+		- less strict
+		- limited complex queries (joins not support)
+		
+	real examples:
+		- social media
+		- e-commerse
+		- real time app: 
+		
+Softwares: SQL server, MySQL workbench

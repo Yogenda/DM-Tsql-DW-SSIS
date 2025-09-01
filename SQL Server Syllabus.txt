@@ -14,8 +14,9 @@ Data Modeling
 - ER diagram symbols -- done
 - chen's notation and crow foot notation -- done
 
+1 sep
 SQL / MySQL - TSQL
-- Intro
+- Intro 
 - DML
 - DDL
 - DQL
